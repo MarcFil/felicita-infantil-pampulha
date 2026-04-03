@@ -201,22 +201,7 @@ export default function App() {
       <section id="hero" className="spread" style={{ height: isMobile ? '90vh' : '130vh' }}>
         <img className="spread-img" src="/images/hero.png" alt="Festa Infantil Espaço Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
-        <div style={{ position: 'absolute', inset: 0, zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px' }}>
-          <FadeIn delay={200}>
-            <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 400, letterSpacing: '.5em', textTransform: 'uppercase', color: 'rgba(255,220,230,.75)', display: 'block', marginBottom: 24 }}>
-              Proposta Exclusiva · Festa Infantil · 2026
-            </span>
-          </FadeIn>
-          <FadeIn delay={400}>
-            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 22 : 28, fontWeight: 300, color: 'rgba(255,255,255,.85)', marginBottom: 10 }}>
-              o dia mais mágico de
-            </p>
-            <h1 style={{ fontFamily: "'Nunito',sans-serif", fontSize: isMobile ? 36 : 'clamp(44px,5vw,72px)', fontWeight: 900, color: '#FFFFFF', lineHeight: 1.05, textShadow: '0 2px 32px rgba(0,0,0,.3)' }}>
-              Uma Infância que Merece<br />Ser Celebrada
-            </h1>
-          </FadeIn>
-        </div>
-        
+                
       </section>
 
       {/* S2 MANIFESTO */}
