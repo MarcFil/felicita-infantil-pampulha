@@ -396,7 +396,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={200}>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {['21 Globos Espelhados de Grande Porte', '02 Microfones sem Fio', 'Mesa Numark Mix Control', 'Estrutura Retangular Completa', '02 Caixas de Som Profissionais', 'Iluminação Cênica Completa'].map((item, i) => (
+                  {['21 Globos Espelhados de Grande Porte', '02 Microfones sem Fio', 'Mesa Numark Mix Control', 'Estrutura Retangular Completa', '02 Caixas de Som Profissionais', 'Jogos de Luz'].map((item, i) => (
                     <li key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', display: 'flex', alignItems: 'center', gap: 12 }}>
                       <span style={{ width: 20, height: 1, background: 'var(--blue)', flexShrink: 0 }} />{item}
                     </li>
