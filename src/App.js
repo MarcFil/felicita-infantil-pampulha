@@ -396,7 +396,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={200}>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {['DJ Profissional — repertório infantil e adulto', '21 Globos Espelhados de Grande Porte', '02 Microfones sem Fio', 'Mesa Numark Mix Control', 'Estrutura Retangular Completa', '02 Caixas de Som Profissionais', 'Painel e Pista de LED', 'Iluminação Cênica Completa'].map((item, i) => (
+                  {['21 Globos Espelhados de Grande Porte', '02 Microfones sem Fio', 'Mesa Numark Mix Control', 'Estrutura Retangular Completa', '02 Caixas de Som Profissionais', 'Iluminação Cênica Completa'].map((item, i) => (
                     <li key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', display: 'flex', alignItems: 'center', gap: 12 }}>
                       <span style={{ width: 20, height: 1, background: 'var(--blue)', flexShrink: 0 }} />{item}
                     </li>
@@ -442,6 +442,9 @@ export default function App() {
             </FadeIn>
             <FadeIn delay={200}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 12, fontWeight: 700, color: 'var(--txts)', marginBottom: 16 }}>
+                  *Ítens opcionais — a composição do buffet é definida conforme o pacote contratado.
+                </p>
                 {[
                   { t: 'Coquetel de boas-vindas *', d: 'Finger foods e drinks de entrada para adultos e kids' },
                   { t: 'Jantar completo *', d: 'Pratos quentes, saladas, carnes e acompanhamentos' },
@@ -457,9 +460,6 @@ export default function App() {
                     </div>
                   </FadeIn>
                 ))}
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 12, fontWeight: 300, color: 'var(--txts)', marginTop: 20, fontStyle: 'italic' }}>
-                  * Itens opcionais — a composição do buffet é definida conforme o pacote contratado.
-                </p>
               </div>
             </FadeIn>
           </div>
