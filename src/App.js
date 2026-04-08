@@ -580,7 +580,7 @@ export default function App() {
             {[
               { l:'Instagram', v:<a href="https://www.instagram.com/espaco_felicita" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>@espaco_felicita</a> },
               { l:'WhatsApp', v:(<><a href="https://wa.me/5531971871101?text=Ol%C3%A1!%20Vim%20pela%20proposta%20infantil." target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none', display:'block', marginBottom:4 }}>(31) 97187-1101</a><a href="https://wa.me/5531984086068?text=Ol%C3%A1!%20Vim%20pela%20proposta%20infantil." target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none', display:'block' }}>(31) 98408-6068</a></>) },
-              { l:'Endereço', v:<a href="https://maps.app.goo.gl/GjqQxNVBU18E1pRd6" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>R. Cel. Jaíro Pereira, 999<br />Palmares, BH</a> },
+              { l:'Endereço', v:<a href="https://share.google/vcgs3JvPt7CfE8pan" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>R. Alberto Cintra, 443<br />Cidade Nova, BH</a> },
               { l:'Site', v:<a href="https://www.espacofelicita.com.br/site/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>www.espacofelicita.com.br</a> },
             ].map((ct,i) => (
               <div key={i} style={{ display:'flex', flexDirection:'column', gap:8 }}>
