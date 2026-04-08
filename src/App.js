@@ -354,8 +354,8 @@ export default function App() {
             <FadeIn delay={200}>
               <div style={{ border: '1px solid var(--blue20)', padding: '36px 32px', background: 'var(--wht)', borderRadius: 8 }}>
                 <EyB text="Mobiliário" />
-                {[{ n: '12', l: 'Mesas Redondas' }, { n: '4', l: 'Mesas Retangulares' }, { n: '116', l: 'Cadeiras' }, { n: '2', l: 'Sofás' }, { n: '10', l: 'Poltronas' }].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 4 ? '1px solid var(--blue10)' : 'none' }}>
+                {[{ n: '12', l: 'Mesas Redondas' }, { n: '2', l: 'Mesas da Família' }, { n: '96', l: 'Cadeiras' }, { n: '10', l: 'Cadeiras Luís XV' }, { n: '2', l: 'Sofás de 4 Lugares' }, { n: '5', l: 'Poltronas' }].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 5 ? '1px solid var(--blue10)' : 'none' }}>
                     <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 34, fontWeight: 400, color: 'var(--blue)', lineHeight: 1, minWidth: 56 }}>{item.n}</span>
                     <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '.15em', textTransform: 'uppercase', color: 'var(--txts)' }}>{item.l}</span>
                   </div>
