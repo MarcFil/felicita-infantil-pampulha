@@ -233,7 +233,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={400}>
                 <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2,1fr)' : 'repeat(4,1fr)', gap: 8, borderTop: '1px solid var(--rose20)', paddingTop: 28 }}>
-                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '180', l: 'Convidados' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
+                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '220', l: 'Convidados' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
                     <div key={i} className="stat-item">
                       <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 400, color: 'var(--rose)', display: 'block', lineHeight: 1.1, marginBottom: 6 }}>{s.n}</span>
                       <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--txts)' }}>{s.l}</span>
@@ -315,7 +315,7 @@ export default function App() {
             </FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               {[
-                { t: 'Capacidade', v: '180', s: 'convidados' },
+                { t: 'Capacidade', v: '220', s: 'convidados' },
                 { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
                 { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
                 { t: 'Arquitetura', v: '4m', s: 'de pé-direito' },
