@@ -196,7 +196,7 @@ export default function App() {
 
       {/* S1 HERO */}
       <section id="hero" className="spread" style={{ height: isMobile ? '90vh' : '130vh' }}>
-        <img className="spread-img" src="/images/hero.png" alt="Festa Infantil Espaço Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
+        <img className="spread-img" src="/images/hero.png" alt="Festa Infantil Espaço Felicitá" style={{ objectPosition: isMobile ? '75% center' : 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
                 
       </section>
@@ -277,7 +277,6 @@ export default function App() {
                 { t: 'Coordenador do Evento', d: 'Orquestração completa — do planejamento ao último brinde' },
                 { t: 'Garçons', d: 'Serviço impecável e presença discreta durante toda a celebração' },
                 { t: 'Porteiro', d: 'Recepção calorosa e controle de acesso com cordialidade' },
-                { t: 'Monitores do Espaço Kids', d: 'Equipe especializada em cuidar e entreter as crianças com segurança' },
                 { t: 'Equipe de Cozinha', d: 'Especialistas em experiência gastronômica de alto nível' },
               ].map((item, i) => (
                 <FadeIn delay={i * 80} key={i}>
