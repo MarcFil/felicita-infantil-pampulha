@@ -230,7 +230,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={400}>
                 <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2,1fr)' : 'repeat(4,1fr)', gap: 8, borderTop: '1px solid var(--rose20)', paddingTop: 28 }}>
-                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '220', l: 'Convidados' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
+                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '230', l: 'Convidados' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
                     <div key={i} className="stat-item">
                       <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 28, fontWeight: 400, color: 'var(--rose)', display: 'block', lineHeight: 1.1, marginBottom: 6 }}>{s.n}</span>
                       <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--txts)' }}>{s.l}</span>
@@ -510,7 +510,6 @@ export default function App() {
             <div style={{ marginTop:28, display:'flex', flexDirection:'column', gap:8, alignItems:'center' }}>
               <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:10, fontWeight:500, letterSpacing:'.3em', textTransform:'uppercase', color:'var(--gold)', border:'.5px solid rgba(201,168,76,.2)', padding:'8px 20px', display:'inline-block' }}>Formas de pagamento a combinar</span>
               <p style={{ fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:14, color:'rgba(250,250,250,.38)', textAlign:'center', lineHeight:1.7 }}>
-                * A cada 10 convidados adicionais, acrescenta-se R$ 2.000,00 ao valor total.<br />
                 * Esta proposta tem validade de 5 dias e não garante reserva de data.
               </p>
             </div>
