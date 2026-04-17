@@ -142,21 +142,17 @@ const FadeIn = ({ children, delay = 0 }) => {
 const LogoLight = ({ height = 48 }) => (
   <img src="/images/Logo com letras branca correto.svg" alt="Espaço Felicitá" style={{ height, width: 'auto', display: 'block' }} />
 );
-const LogoDark = ({ height = 48 }) => (
   <img src="/images/Logodark.svg" alt="Espaço Felicitá" style={{ height, width: 'auto', display: 'block' }} />
 );
 
-const EyR = ({ text }) => (
   <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--rose)', display: 'block', marginBottom: 14 }}>{text}</span>
 );
-const EyB = ({ text }) => (
   <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: 14 }}>{text}</span>
 );
 const EyG = ({ text }) => (
   <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: '.44em', textTransform: 'uppercase', color: 'var(--gold)', display: 'block', marginBottom: 14 }}>{text}</span>
 );
 
-const RuleR = ({ center = false }) => (
   <div style={{ width: 56, height: 2, background: center ? 'linear-gradient(90deg,transparent,var(--rose),transparent)' : 'linear-gradient(90deg,var(--rose),transparent)', margin: center ? '18px auto' : '18px 0', borderRadius: 2 }} />
 );
 const RuleG = ({ center = false }) => (
