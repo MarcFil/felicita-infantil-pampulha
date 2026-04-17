@@ -6,101 +6,60 @@ const injectStyles = () => {
   style.id = 'felicita-pampulha-styles';
   style.innerHTML = `
     @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
-
     :root {
-      --rose:   #E8789A;
-      --rose2:  #F0A0BA;
-      --blue:   #5BC4E8;
-      --blue2:  #A8DDEF;
-      --gold:   #C9A84C;
-      --gold2:  #E8C97E;
-      --mint:   #7ED8B0;
-      --cream:  #FDFAF6;
-      --cream2: #FFF5F9;
-      --dark:   #0A0A0A;
-      --dark2:  #101010;
-      --dark3:  #161616;
-      --txt:    #2C2C2C;
-      --txts:   #5C5C5C;
-      --wht:    #FAFAFA;
-      --crm:    #F5F0E8;
-
-      --rose10: rgba(232,120,154,.10);
-      --rose20: rgba(232,120,154,.20);
-      --rose30: rgba(232,120,154,.30);
-      --blue10: rgba(91,196,232,.10);
-      --blue20: rgba(91,196,232,.20);
-      --gold10: rgba(201,168,76,.10);
-      --gold20: rgba(201,168,76,.20);
-      --gold30: rgba(201,168,76,.30);
-      --gold50: rgba(201,168,76,.50);
+      --rose:#E8789A;--rose2:#F0A0BA;--blue:#5BC4E8;--blue2:#A8DDEF;
+      --gold:#C9A84C;--gold2:#E8C97E;--mint:#7ED8B0;--cream:#FDFAF6;
+      --cream2:#FFF5F9;--dark:#0A0A0A;--dark2:#101010;--dark3:#161616;
+      --txt:#2C2C2C;--txts:#5C5C5C;--wht:#FAFAFA;--crm:#F5F0E8;
+      --rose10:rgba(232,120,154,.10);--rose20:rgba(232,120,154,.20);--rose30:rgba(232,120,154,.30);
+      --blue10:rgba(91,196,232,.10);--blue20:rgba(91,196,232,.20);
+      --gold10:rgba(201,168,76,.10);--gold20:rgba(201,168,76,.20);
+      --gold30:rgba(201,168,76,.30);--gold50:rgba(201,168,76,.50);
     }
-
-    html { scroll-behavior: smooth; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--cream); color: var(--dark); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-    ::selection { background: var(--gold); color: var(--dark); }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--dark); }
-    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
-
-    .fade-up { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.25,.46,.45,.94),transform .8s cubic-bezier(.25,.46,.45,.94); }
-    .fade-up.visible { opacity:1; transform:translateY(0); }
-
-    /* HEADER */
-    .f-header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(10,10,10,.96); backdrop-filter:blur(16px); border-bottom:1px solid rgba(201,168,76,.2); display:flex; align-items:center; justify-content:space-between; padding:14px 56px; }
-    .f-header-badge { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:600; letter-spacing:.35em; text-transform:uppercase; color:var(--gold); background:rgba(201,168,76,.1); border:1px solid rgba(201,168,76,.3); padding:6px 16px; border-radius:999px; }
-
-    /* SPREAD */
-    .spread { position:relative; overflow:hidden; }
-    .spread-img { position:absolute; top:-15%; left:0; right:0; bottom:0; width:100%; height:100%; object-fit:cover; display:block; }
-    .spread-veil { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(10,10,10,.25) 0%,rgba(10,10,10,0) 30%,rgba(10,10,10,0) 55%,rgba(10,10,10,.82) 100%); }
-
-    /* PHOTO FRAME */
-    .photo-frame { position:relative; overflow:hidden; border-radius:4px; }
-    .photo-frame img { display:block; width:100%; height:100%; object-fit:cover; transition:transform 1.1s ease; }
-    .photo-frame:hover img { transform:scale(1.04); }
-    .photo-frame-border { position:absolute; inset:0; border:.5px solid var(--gold30); z-index:2; pointer-events:none; border-radius:4px; }
-
-    /* CARDS */
-    .diff-card { padding:28px 24px; border:1px solid var(--gold20); background:var(--dark3); border-radius:12px; position:relative; overflow:hidden; transition:border-color .3s,box-shadow .3s; box-shadow:0 4px 20px rgba(201,168,76,.06); }
-    .diff-card:hover { border-color:var(--gold); box-shadow:0 8px 32px rgba(201,168,76,.12); }
-    .diff-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--gold),var(--gold2)); border-radius:12px 12px 0 0; }
-
-    /* VIP CARD */
-    .vip-card { padding:36px 32px; border:1px solid var(--gold30); background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(10,10,10,0)); border-radius:12px; position:relative; overflow:hidden; }
-    .vip-card::before { content:'VIP'; position:absolute; top:16px; right:20px; font-family:'Playfair Display',serif; font-size:11px; font-weight:700; letter-spacing:.4em; color:var(--gold); opacity:.3; }
-
-    .team-item { border-bottom:1px solid rgba(201,168,76,.15); padding-bottom:20px; transition:border-color .4s; }
-    .team-item:hover { border-color:var(--gold); }
-
-    .buffet-row { display:flex; flex-direction:column; padding-bottom:20px; border-bottom:1px solid var(--gold10); }
-    @media (min-width:768px) { .buffet-row { flex-direction:row; align-items:baseline; } }
-
-    /* INVESTIMENTO */
-    .inv-table-row { display:grid; grid-template-columns:1fr 1.5fr; padding:14px 0; border-bottom:.5px solid rgba(201,168,76,.12); transition:background .2s; }
-    .inv-table-row:hover { background:rgba(201,168,76,.05); }
-    .inv-table-row:last-child { border-bottom:none; }
-
-    /* BOATE ITEMS */
-    .boate-item { display:flex; align-items:center; gap:16px; padding:20px 0; border-bottom:1px solid rgba(201,168,76,.1); }
-    .boate-item:last-child { border-bottom:none; }
-    .boate-dot { width:8px; height:8px; border-radius:50%; background:var(--gold); flex-shrink:0; box-shadow:0 0 10px var(--gold); }
-
-    .dot-bg { background-image:radial-gradient(circle,rgba(201,168,76,.06) 1px,transparent 1px); background-size:28px 28px; }
-    .stat-item { display:flex; flex-direction:column; padding:16px 0; }
-
-    .grid-bg { background-image:linear-gradient(rgba(166,129,54,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(166,129,54,.05) 1px,transparent 1px); background-size:30px 30px; }
-
-    @media (max-width:768px) {
-      .f-header { padding:10px 16px; }
-      section { padding-left:20px !important; padding-right:20px !important; overflow-x:hidden !important; }
-      * { max-width:100vw; box-sizing:border-box; }
-      #hero { height:90vh !important; }
-      .inv-table-row { display:block !important; padding:16px !important; border:.5px solid rgba(201,168,76,.2) !important; background:var(--dark2) !important; text-align:center !important; margin-bottom:4px !important; }
-      .inv-table-row span:nth-child(1) { font-size:22px !important; display:block !important; margin-bottom:10px !important; color:var(--gold) !important; }
-      .inv-table-row span:nth-child(2)::before { content:'Domingo: ' !important; font-weight:600 !important; color:var(--gold) !important; }
-      .inv-table-row span:nth-child(2) { font-size:13px !important; display:block !important; margin-bottom:4px !important; }
+    html{scroll-behavior:smooth;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--cream);color:var(--dark);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    ::selection{background:var(--gold);color:var(--dark);}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:var(--dark);}
+    ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px;}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.25,.46,.45,.94),transform .8s cubic-bezier(.25,.46,.45,.94);}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+    .f-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,10,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:space-between;padding:14px 56px;}
+    .f-header-badge{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);padding:6px 16px;border-radius:999px;}
+    .spread{position:relative;overflow:hidden;}
+    .spread-img{position:absolute;top:-15%;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;display:block;}
+    .spread-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.25) 0%,rgba(10,10,10,0) 30%,rgba(10,10,10,0) 55%,rgba(10,10,10,.82) 100%);}
+    .photo-frame{position:relative;overflow:hidden;border-radius:4px;}
+    .photo-frame img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.1s ease;}
+    .photo-frame:hover img{transform:scale(1.04);}
+    .photo-frame-border{position:absolute;inset:0;border:.5px solid var(--gold30);z-index:2;pointer-events:none;border-radius:4px;}
+    .diff-card{padding:28px 24px;border:1px solid var(--gold20);background:var(--dark3);border-radius:12px;position:relative;overflow:hidden;transition:border-color .3s,box-shadow .3s;box-shadow:0 4px 20px rgba(201,168,76,.06);}
+    .diff-card:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(201,168,76,.12);}
+    .diff-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:12px 12px 0 0;}
+    .vip-card{padding:36px 32px;border:1px solid var(--gold30);background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(10,10,10,0));border-radius:12px;position:relative;overflow:hidden;}
+    .vip-card::before{content:'VIP';position:absolute;top:16px;right:20px;font-family:'Playfair Display',serif;font-size:11px;font-weight:700;letter-spacing:.4em;color:var(--gold);opacity:.3;}
+    .team-item{border-bottom:1px solid rgba(201,168,76,.15);padding-bottom:20px;transition:border-color .4s;}
+    .team-item:hover{border-color:var(--gold);}
+    .buffet-row{display:flex;flex-direction:column;padding-bottom:20px;border-bottom:1px solid var(--gold10);}
+    @media(min-width:768px){.buffet-row{flex-direction:row;align-items:baseline;}}
+    .inv-table-row{display:grid;grid-template-columns:1fr 1.5fr;padding:14px 0;border-bottom:.5px solid rgba(201,168,76,.12);transition:background .2s;}
+    .inv-table-row:hover{background:rgba(201,168,76,.05);}
+    .inv-table-row:last-child{border-bottom:none;}
+    .boate-item{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(201,168,76,.1);}
+    .boate-item:last-child{border-bottom:none;}
+    .boate-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;box-shadow:0 0 10px var(--gold);}
+    .stat-item{display:flex;flex-direction:column;padding:16px 0;}
+    .grid-bg{background-image:linear-gradient(rgba(166,129,54,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(166,129,54,.05) 1px,transparent 1px);background-size:30px 30px;}
+    @media(max-width:768px){
+      .f-header{padding:10px 16px;}
+      section{padding-left:20px !important;padding-right:20px !important;overflow-x:hidden !important;}
+      *{max-width:100vw;box-sizing:border-box;}
+      #hero{height:90vh !important;}
+      .inv-table-row{display:block !important;padding:16px !important;border:.5px solid rgba(201,168,76,.2) !important;background:var(--dark2) !important;text-align:center !important;margin-bottom:4px !important;}
+      .inv-table-row span:nth-child(1){font-size:22px !important;display:block !important;margin-bottom:10px !important;color:var(--gold) !important;}
+      .inv-table-row span:nth-child(2)::before{content:'Domingo: ' !important;font-weight:600 !important;color:var(--gold) !important;}
+      .inv-table-row span:nth-child(2){font-size:13px !important;display:block !important;margin-bottom:4px !important;}
     }
   `;
   document.head.appendChild(style);
@@ -142,19 +101,11 @@ const FadeIn = ({ children, delay = 0 }) => {
 const LogoLight = ({ height = 48 }) => (
   <img src="/images/Logo com letras branca correto.svg" alt="Espaço Felicitá" style={{ height, width: 'auto', display: 'block' }} />
 );
-  <img src="/images/Logodark.svg" alt="Espaço Felicitá" style={{ height, width: 'auto', display: 'block' }} />
-);
 
-  <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--rose)', display: 'block', marginBottom: 14 }}>{text}</span>
-);
-  <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: 14 }}>{text}</span>
-);
 const EyG = ({ text }) => (
   <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: '.44em', textTransform: 'uppercase', color: 'var(--gold)', display: 'block', marginBottom: 14 }}>{text}</span>
 );
 
-  <div style={{ width: 56, height: 2, background: center ? 'linear-gradient(90deg,transparent,var(--rose),transparent)' : 'linear-gradient(90deg,var(--rose),transparent)', margin: center ? '18px auto' : '18px 0', borderRadius: 2 }} />
-);
 const RuleG = ({ center = false }) => (
   <div style={{ width: 56, height: 1, background: center ? 'linear-gradient(90deg,transparent,var(--gold),transparent)' : 'linear-gradient(90deg,var(--gold),transparent)', margin: center ? '18px auto' : '18px 0' }} />
 );
@@ -177,13 +128,11 @@ const Frame = ({ src, alt, style: s = {}, imgStyle = {} }) => (
 export default function App() {
   useEffect(() => { injectStyles(); }, []);
   const isMobile = useIsMobile();
-
   const gridBg = { backgroundImage: 'linear-gradient(rgba(166,129,54,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(166,129,54,.05) 1px,transparent 1px)', backgroundSize: '30px 30px' };
 
   return (
     <div style={{ backgroundColor: 'var(--dark)', minHeight: '100vh', overflowX: 'hidden' }}>
 
-      {/* HEADER */}
       <header className="f-header">
         <LogoLight height={isMobile ? 36 : 48} />
         <span className="f-header-badge">Proposta Exclusiva · Pampulha · 2026</span>
@@ -218,9 +167,6 @@ export default function App() {
               <FadeIn delay={300}>
                 <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'rgba(250,250,250,.5)', lineHeight: 1.95, marginBottom: 12 }}>
                   Da recepção ao último brinde, nossa equipe cuida de cada detalhe para que você e seus convidados vivam essa noite com presença, leveza e muito estilo.
-                </p>
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'rgba(250,250,250,.38)', lineHeight: 1.95 }}>
-                  Espaço, serviços e buffet próprio unidos para criar uma festa que ficará na memória de todos os presentes.
                 </p>
               </FadeIn>
               <FadeIn delay={400}>
@@ -306,11 +252,11 @@ export default function App() {
             </FadeIn>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               {[
-                { t: 'Capacidade', v: '230', s: 'convidados', cor: 'var(--gold)' },
-                { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes', cor: 'var(--gold)' },
-                { t: 'Arquitetura', v: '4m', s: 'de pé-direito', cor: 'var(--gold)' },
-                { t: 'Elegância', v: 'Lustres', s: 'de cristal', cor: 'var(--gold)' },
-                { t: 'Segurança', v: 'Câmeras', s: 'circuito completo', cor: 'var(--gold)' },
+                { t: 'Capacidade', v: '230', s: 'convidados' },
+                { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
+                { t: 'Arquitetura', v: '4m', s: 'de pé-direito' },
+                { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
+                { t: 'Segurança', v: 'Câmeras', s: 'circuito completo' },
               ].map((c, i) => (
                 <FadeIn delay={i * 70} key={i}>
                   <div className="diff-card">
@@ -320,7 +266,6 @@ export default function App() {
                   </div>
                 </FadeIn>
               ))}
-              {/* SALA VIP */}
               <FadeIn delay={350}>
                 <div className="vip-card" style={{ gridColumn: '1 / -1' }}>
                   <EyG text="Sala VIP" />
@@ -375,7 +320,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* S7 SPREAD 2 — foto atual do hero */}
+      {/* S7 SPREAD 2 */}
       <section className="spread" style={{ height: isMobile ? '72vh' : '110vh' }}>
         <img className="spread-img" src="/images/spread-2.png" alt="Espaço Felicitá Pampulha" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
@@ -400,15 +345,15 @@ export default function App() {
                 <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(26px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold)', lineHeight: 1.12 }}>ganha vida.</h2>
                 <RuleG />
                 <blockquote style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 22, color: 'rgba(250,250,250,.55)', lineHeight: 1.8, borderLeft: '2px solid var(--gold)', paddingLeft: 20, margin: '24px 0 32px' }}>
-                  "Uma estrutura de boate completa, pensada para que a energia e a magia da noite sejam sentidas por cada convidado — do primeiro ao último momento."
+                  "Uma estrutura de boate completa, pensada para que a energia e a magia da noite sejam sentidas por cada convidado."
                 </blockquote>
               </FadeIn>
               <FadeIn delay={200}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   {[
-                    { icon: '▬', label: 'Painel de LED', desc: 'Painel de LED de grande formato com programação personalizada para o tema da festa' },
-                    { icon: '〰', label: 'Faixas de LED no Teto', desc: 'Iluminação com faixas de LED integradas ao teto, criando atmosfera única e imersiva' },
-                    { icon: '♪', label: 'DJ Profissional', desc: 'DJ com equipamento completo, controlador e mixagem ao vivo durante toda a celebração' },
+                    { label: 'Painel de LED', desc: 'Painel de LED de grande formato com programação personalizada para o tema da festa' },
+                    { label: 'Faixas de LED no Teto', desc: 'Iluminação com faixas de LED integradas ao teto, criando atmosfera única e imersiva' },
+                    { label: 'DJ Profissional', desc: 'DJ com equipamento completo, controlador e mixagem ao vivo durante toda a celebração' },
                   ].map((item, i) => (
                     <div key={i} className="boate-item">
                       <div className="boate-dot" />
@@ -497,7 +442,6 @@ export default function App() {
             </div>
           </FadeIn>
           <FadeIn delay={200}>
-            {/* Info chips */}
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, marginBottom: 40 }}>
               {['Somente aos Domingos', 'Duração de 4 horas', 'Mínimo 80 convidados'].map((info, i) => (
                 <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--gold)', background: 'rgba(201,168,76,.08)', border: '1px solid rgba(201,168,76,.2)', padding: '7px 18px', borderRadius: 999 }}>{info}</span>
@@ -507,7 +451,6 @@ export default function App() {
               {[{ top:-1,left:-1,borderTop:'2px solid var(--gold)',borderLeft:'2px solid var(--gold)' },{ top:-1,right:-1,borderTop:'2px solid var(--gold)',borderRight:'2px solid var(--gold)' },{ bottom:-1,left:-1,borderBottom:'2px solid var(--gold)',borderLeft:'2px solid var(--gold)' },{ bottom:-1,right:-1,borderBottom:'2px solid var(--gold)',borderRight:'2px solid var(--gold)' }].map((s,i) => (
                 <div key={i} style={{ position:'absolute', width:18, height:18, ...s }} />
               ))}
-              {/* Header */}
               {!isMobile && (
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1.5fr', paddingBottom:16, marginBottom:16, borderBottom:'.5px solid rgba(201,168,76,.2)' }}>
                   {['Convidados','Domingo · 4 horas'].map((h,i) => (
