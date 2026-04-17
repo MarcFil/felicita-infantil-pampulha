@@ -314,7 +314,6 @@ export default function App() {
                 { t: 'Capacidade', v: '230', s: 'convidados' },
                 { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
                 { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
-                { t: 'Arquitetura', v: '4m', s: 'de pé-direito' },
                 { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
                 { t: 'Segurança', v: 'Câmeras', s: 'circuito completo' },
               ].map((c, i) => (
